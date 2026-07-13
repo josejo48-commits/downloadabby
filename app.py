@@ -1,26 +1,27 @@
 import streamlit as st
 
-# 1. CONFIGURACIÓN DE LA PÁGINA (Coloca el nombre de la app)
+# 1. CONFIGURACIÓN DE LA PÁGINA (Coloca el logo de Abby en la pestaña del navegador)
 st.set_page_config(
     page_title="DownloadAbby",
-    page_icon="📥",  # Icono temporal de la pestaña mientras subimos la imagen real
+    page_icon="logo_abby.png",  # <-- ¡Aquí ya carga tu imagen en la pestaña!
     layout="centered"
 )
 
-# 2. ESTILOS CSS PERSONALIZADOS (Para darle el fondo rosa y la apariencia de la app)
+# 2. ESTILOS CSS PERSONALIZADOS
 st.markdown("""
     <style>
-    /* Cambiar el fondo de toda la aplicación a rosa pastel */
+    /* Fondo rosa pastel */
     .stApp {
         background-color: #FCE4EC;
     }
     
-    /* Estilo para los títulos principales */
+    /* Títulos principales */
     .titulo-principal {
         text-align: center; 
         color: #EC407A; 
         font-family: 'Arial', sans-serif;
         font-weight: bold;
+        margin-top: 10px;
         margin-bottom: 0px;
     }
     .subtitulo {
@@ -31,7 +32,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
     
-    /* Estilo para las tarjetas blancas redondeadas */
+    /* Tarjetas blancas redondeadas */
     .tarjeta-blanca {
         background-color: white;
         padding: 20px;
@@ -44,9 +45,8 @@ st.markdown("""
 
 # 3. CONTENIDO VISUAL DE LA APP
 
-# Imagen del logo centrada (Aquí es donde colocaremos tu logo en el siguiente paso)
-# Por ahora dejamos el espacio listo y centrado
-st.markdown("<div style='text-align: center;'><h2>📥</h2></div>", unsafe_allow_html=True)
+# Mostramos el logo hermoso centrado en la pantalla principal
+st.image("logo_abby.png", width=150, use_container_width=False)
 
 # Títulos
 st.markdown("<h1 class='titulo-principal'>DOWNLOAD ABBY</h1>", unsafe_allow_html=True)
