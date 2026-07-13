@@ -24,7 +24,7 @@ st.markdown("""
         color: white;
     }
     </style>
-    """, unsafe_style_code=True)
+    """, unsafe_allow_html=True)
 
 st.title("🎵 Pegar Enlace")
 st.markdown("Introduce la URL del video de YouTube o TikTok:")
