@@ -40,15 +40,15 @@ if st.button("✨ ¡Descargar Ahora! ✨"):
         st.error("Por favor, introduce una URL válida.")
     else:
         with st.spinner("Conectando con el servidor... Por favor espera."):
-            # Configuración blindada contra bloqueos de YouTube en servidores nube
+            # Configuración optimizada para evadir el bloqueo en la nube sin cookies
             opciones = {
                 'outtmpl': '%(title)s.%(ext)s',
-                # Forzamos a simular un cliente móvil Android para evitar el "Video unavailable"
-                'extractor_args': {'youtube': {'player_client': ['android', 'web']}},
+                # Forzamos una API alternativa de YouTube que no bloquea la IP del servidor
+                'extractor_args': {'youtube': {'player_client': ['ios', 'web']}},
                 'http_headers': {
-                    'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                    'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8',
+                    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    'Accept-Language': 'es-ES,es;q=0.9',
                 }
             }
             
@@ -86,7 +86,6 @@ if st.button("✨ ¡Descargar Ahora! ✨"):
                         )
                     os.remove(archivo_final)
                     
-                    # Actualiza el estado del historial visual
                     st.markdown("### Download History")
                     st.info("Última descarga completada: Listo para recibir nuevos enlaces")
                 else:
